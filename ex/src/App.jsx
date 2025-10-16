@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { Users } from './users'
 import { color } from 'motion';
+import Header from "./Header";
+
+
 
 function App() {
 
@@ -17,7 +20,26 @@ function App() {
   const totalPrice = cartItems.reduce((sum, item) => {
   return sum + item.price * item.quantity;
 }, 0);
+  const [heroItems, setHeroItems] = useState([]);
+
   
+  
+useEffect(() => {
+  if (heroItems.length === 0) {
+    const indices = Array.from({ length: Users.length }, (_, i) => i);
+    const shuffled = indices.sort(() => 0.5 - Math.random());
+    const newItems = shuffled.slice(0, 5);
+    setHeroItems(newItems);
+  }
+}, []);
+
+useEffect(() => {
+  if (heroItems.length > 0) {
+    console.log("Hero items updated:", heroItems);
+  }
+}, [heroItems]);
+
+
 
 
 
@@ -25,14 +47,29 @@ function App() {
   console.log(cartItems)
   return (
     <> 
-    <div className='herocontainer'>
 
+      <div className="herocontainer">
+  <Header />
+<div className='herocontent'>
+  <h1>FIND YOUR <span className="italictext">FIT</span></h1>
 
-      <h1> FIND
-        YOUR
-        <div className='italictext'> FIT </div>
-      </h1>
-    </div>
+  {heroItems.length === 5 && (
+  <div className="gallery-wrap">
+    {heroItems.map((index, i) => (
+      <div
+        key={i}
+        className={`heroitem heroitem-${i + 1}`}
+        style={{ backgroundImage: `url(${Users[index]?.image1})`}}
+      onClick={() => { setSelectedItem(index + 1); window.location.href = "#singleitem";
+      }
+      }
+      ></div>
+    ))}
+    
+  </div>
+)}
+  </div>
+  </div>
     
     <div className='dynamicsearch'><div className='selectioncontainer'>
       <input type="text" className="search" placeholder='Search' onChange={e=> setQuery(e.target.value)}/> 
@@ -104,9 +141,11 @@ function App() {
               return matchesQuery && matchesGender && matchesCType;
             }).map((user) => (
 
-        <li key={user.id} className='listItem' onClick={() => setSelectedItem(user.id)}>
+        <div key={user.id} className='listItem' onClick={() => setSelectedItem(user.id)}
+>
+  <img src={user.image1}></img>
            <div className='itemtoparea'><h2>{user.first_name}</h2> <p>${user.price}</p></div><div className='itembottomarea'> <button>S</button> <button>M</button> <button>L</button> <button>XL</button> </div> 
-          </li> 
+          </div> 
           
         // This is where you would stylise for each item. ^^
     ))}
@@ -116,11 +155,11 @@ function App() {
       </div>
       </div>
 
-       <div className='singleitemcontainer'>
+       <div className='singleitemcontainer' id='singleitem'>
 
         <div className='singleleft'>
 <h1>{Users[selectedItem - 1].first_name.toUpperCase()}</h1>
-<div className='singleimagecontainer'> <img src={Users[selectedItem - 1].image1} alt={Users[selectedItem - 1].first_name} height="450px" width="345px"></img> <img src={Users[selectedItem - 1].image2} alt={Users[selectedItem - 1].first_name} height="450px" width="345px"></img></div>
+<div className='singleimagecontainer'> <img src={Users[selectedItem - 1].image1} alt={Users[selectedItem - 1].first_name} height="450px" width="345px"></img> </div>
 <img></img>
         </div>
 
@@ -180,19 +219,19 @@ function App() {
   <ul>
     {cartItems.map((item, index) => (
       <li key={index} className='cartitem'>
-        <img src={item.image} width="70px" height="90px"></img>{item.name} - {item.size} <div className='quantitysticker'>{item.quantity}x</div> <div className='price' style={{marginLeft: "67vw"}}>${item.price}</div>
+        <img src={item.image} width="70px" height="90px"></img>{item.name} - {item.size} <div className='quantitysticker'>{item.quantity}x</div> <div className='price'>${item.price}</div>
       </li>
     ))}
   </ul>
   <hr></hr>
-
+<div className='cartbottomarea'>
   <button onClick={() => setCartItems([])}>
   CLEAR CART
 </button>
 
 <h1 className='totalPrice'> Total: ${totalPrice.toFixed(2)} </h1>
 <button className='paymentButton'>Proceed to Payment</button>
-
+</div>
 
       </div>
 
