@@ -3,6 +3,9 @@ import './App.css'
 import { Users } from './users'
 import { color } from 'motion';
 import Header from "./Header";
+import RollingGallery from './RollingGallery'
+  
+
 
 
 
@@ -20,24 +23,7 @@ function App() {
   const totalPrice = cartItems.reduce((sum, item) => {
   return sum + item.price * item.quantity;
 }, 0);
-  const [heroItems, setHeroItems] = useState([]);
-
-  
-  
-useEffect(() => {
-  if (heroItems.length === 0) {
-    const indices = Array.from({ length: Users.length }, (_, i) => i);
-    const shuffled = indices.sort(() => 0.5 - Math.random());
-    const newItems = shuffled.slice(0, 5);
-    setHeroItems(newItems);
-  }
-}, []);
-
-useEffect(() => {
-  if (heroItems.length > 0) {
-    console.log("Hero items updated:", heroItems);
-  }
-}, [heroItems]);
+ 
 
 
 
@@ -53,7 +39,7 @@ useEffect(() => {
 <div className='herocontent'>
   <h1>FIND YOUR <span className="italictext">FIT</span></h1>
 
-  {heroItems.length === 5 && (
+  {/* {heroItems.length === 5 && (
   <div className="gallery-wrap">
     {heroItems.map((index, i) => (
       <div
@@ -65,9 +51,13 @@ useEffect(() => {
       }
       ></div>
     ))}
+
+    
     
   </div>
-)}
+)} */
+
+<RollingGallery autoplay={true} pauseOnHover={true} />}
   </div>
   </div>
     
