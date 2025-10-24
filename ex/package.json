@@ -1,5 +1,6 @@
 {
   "name": "ex",
+  "homepage": "https://spikedwithsherbet.github.io/Ex-communicated/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,9 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
