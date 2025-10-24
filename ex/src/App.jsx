@@ -65,29 +65,12 @@ useEffect(() => {
 <div className='herocontent'>
   <h1>FIND YOUR <span className="italictext">FIT</span></h1>
 
-  {/* {heroItems.length === 5 && (
-  <div className="gallery-wrap">
-    {heroItems.map((index, i) => (
-      <div
-        key={i}
-        className={`heroitem heroitem-${i + 1}`}
-        style={{ backgroundImage: `url(${Users[index]?.image1})`}}
-      onClick={() => { setSelectedItem(index + 1); window.location.href = "#singleitem";
-      }
-      }
-      ></div>
-    ))}
 
-    
-    
-  </div>
-)} */
 <Suspense
 				fallback={<div>RollingGallery Loading...</div>}
 			>
 				<RollingGallery autoplay={true} pauseOnHover={true} />
 			</Suspense>
-}
   </div>
 
             </div> 

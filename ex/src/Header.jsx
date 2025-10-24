@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "/finisher-header.es5.min.js";
+    script.src = "./finisher-header.es5.min.jsx";
     script.async = true;
     script.onload = () => {
       new window.FinisherHeader({
