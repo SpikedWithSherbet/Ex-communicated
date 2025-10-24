@@ -74,7 +74,7 @@ const DynamicSearch = ({
               </div>
               <div className='itembottomarea'>
                 {["S", "M", "L", "XL"].map(size => (
-                  <button key={size}>{size}</button>
+                  <button key={size} onClick={() => setSelectedItem(user.id)} >{size}</button>
                 ))}
               </div>
             </div>
