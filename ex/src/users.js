@@ -143,7 +143,7 @@ export const Users = [
 
   {
     "id": 16,
-    "first_name": "Ec Shorts",
+    "first_name": "Logo Shorts",
     "clothing_type": "Shorts",
     "price": 19.99,
     "gender": "Unisex",
@@ -151,7 +151,7 @@ export const Users = [
   },
   {
     "id": 17,
-    "first_name": "Ec Bag",
+    "first_name": "Graphic Bag",
     "clothing_type": "Accessories",
     "price": 24.99,
     "gender": "Unisex",
@@ -159,7 +159,7 @@ export const Users = [
   },
   {
     "id": 18,
-    "first_name": "Ec Bag 2",
+    "first_name": "Graphic Bag",
     "clothing_type": "Accessories",
     "price": 24.99,
     "gender": "Unisex",
@@ -167,7 +167,7 @@ export const Users = [
   },
   {
     "id": 19,
-    "first_name": "Ec Hat",
+    "first_name": "Graphic Hat",
     "clothing_type": "Accessories",
     "price": 14.99,
     "gender": "Unisex",
@@ -175,7 +175,7 @@ export const Users = [
   },
   {
     "id": 20,
-    "first_name": "Ec Hat 2",
+    "first_name": "Red Logo Hat",
     "clothing_type": "Accessories",
     "price": 14.99,
     "gender": "Unisex",
@@ -183,7 +183,7 @@ export const Users = [
   },
   {
     "id": 21,
-    "first_name": "Ec Oversized Tee",
+    "first_name": "Circle Design Tee",
     "clothing_type": "T-shirts",
     "price": 34.99,
     "gender": "Unisex",
@@ -191,7 +191,7 @@ export const Users = [
   },
   {
     "id": 22,
-    "first_name": "Ec Oversized Tee 2",
+    "first_name": "Crossed Graphic Tee",
     "clothing_type": "T-shirts",
     "price": 34.99,
     "gender": "Unisex",
@@ -199,8 +199,8 @@ export const Users = [
   },
   {
     "id": 23,
-    "first_name": "Ec Oversized Sweat",
-    "clothing_type": "Sweatshirts",
+    "first_name": "Sweat Activated Tee",
+    "clothing_type": "T-shirts",
     "price": 44.99,
     "gender": "Unisex",
     "image1": "src/assets/EcOversizedSweat.png"
@@ -223,7 +223,7 @@ export const Users = [
   },
   {
     "id": 26,
-    "first_name": "Casual Shorts",
+    "first_name": "'Grindy Reps' Shorts",
     "clothing_type": "Shorts",
     "price": 19.99,
     "gender": "Unisex",
@@ -231,7 +231,7 @@ export const Users = [
   },
   {
     "id": 27,
-    "first_name": "Casual Shorts 2",
+    "first_name": "Circle Design Shorts",
     "clothing_type": "Shorts",
     "price": 19.99,
     "gender": "Unisex",

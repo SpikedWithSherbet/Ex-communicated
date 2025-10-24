@@ -3,6 +3,14 @@
   height: 500px;
   width: 100%;
   overflow: hidden;
+
+  @media (max-width: 1439px)
+  
+  {
+    right: 39rem;
+    bottom: .1rem;
+    top: 23rem;
+  }
 }
 
 .gallery-gradient {
@@ -60,6 +68,13 @@
   border: 3px solid #fff;
   object-fit: cover;
   transition: 0.3s ease;
+
+  @media (min-width: 1023px) and (max-width: 1439px)
+  
+  {
+    height: 7rem;
+    bottom: 7rem;
+  }
 }
 
 .gallery-item:hover .gallery-img {
@@ -68,12 +83,17 @@
   transition: 0.3s ease;
 }
 
-@media (max-width: 768px) {
+
+
+@media screen and (max-width: 768px) {
   .gallery-item {
     padding: 6%;
+    
   }
   .gallery-img {
     height: 100px;
     width: 220px;
   }
+
+  
 }

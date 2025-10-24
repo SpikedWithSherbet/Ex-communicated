@@ -1,10 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense, useRef } from 'react'
 import './App.css'
 import { Users } from './users'
 import { color } from 'motion';
 import Header from "./Header";
+import DynamicSearch from './DynamicSearch';
 import RollingGallery from './RollingGallery'
+import SizeGuide from './SizeGuide';
+import CareGuide from './CareGuide';
   
+const heroGallery = lazy(() => import("./RollingGallery"))
+const dynamicSearch = lazy(() => import("./DynamicSearch"))
+
+
 
 
 
@@ -20,10 +27,29 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [selectedSize, setSelectedSize] = useState("M");
   const [quantity, setQuantity] = useState(1);
+  const dialogRef = useRef(null)
   const totalPrice = cartItems.reduce((sum, item) => {
   return sum + item.price * item.quantity;
 }, 0);
- 
+  const [heroItems, setHeroItems] = useState([]);
+  const [dialogContent, setDialogContent] = useState(null);
+
+  
+  
+useEffect(() => {
+  if (heroItems.length === 0) {
+    const indices = Array.from({ length: Users.length }, (_, i) => i);
+    const shuffled = indices.sort(() => 0.5 - Math.random());
+    const newItems = shuffled.slice(0, 5);
+    setHeroItems(newItems);
+  }
+}, []);
+
+useEffect(() => {
+  if (heroItems.length > 0) {
+    console.log("Hero items updated:", heroItems);
+  }
+}, [heroItems]);
 
 
 
@@ -56,94 +82,31 @@ function App() {
     
   </div>
 )} */
-
-<RollingGallery autoplay={true} pauseOnHover={true} />}
+<Suspense
+				fallback={<div>RollingGallery Loading...</div>}
+			>
+				<RollingGallery autoplay={true} pauseOnHover={true} />
+			</Suspense>
+}
   </div>
-  </div>
-    
-    <div className='dynamicsearch'><div className='selectioncontainer'>
-      <input type="text" className="search" placeholder='Search' onChange={e=> setQuery(e.target.value)}/> 
-      <div className='buttoncontainer' style={{display: "flex"}}>
-      <button
-        className='Unisex'
-        onClick={() => setItemGender("Unisex")}
-      >
-        Unisex
-      </button>
 
-      <button
-        className='Male'
-        onClick={() => setItemGender("Male")}
-      >
-        Male
-      </button>
-
-       <button
-        className='Female'
-        onClick={() => setItemGender("Female")}
-      >
-        Female
-      </button></div>
-     
-      <h2>Clothing Type</h2>
-       <div className='clothingtype'>
-      <button
-        className='T-shirts'
-        onClick={() => setClothingType("T-shirts")}
-      >
-        T-shirts
-      </button>
-
-       <button
-        className='Sweatpants'
-        onClick={() => setClothingType("Sweatpants")}
-      >
-        Sweatpants
-      </button>
-
-       <button
-        className='Shorts'
-        onClick={() => setClothingType("Shorts")}
-      >
-        Shorts
-      </button>
-
-       <button
-        className='Jackets'
-        onClick={() => setClothingType("Jackets")}
-      >
-        Jackets
-      </button>
-</div>
-      </div>
-       
-      
-<div className='gridcontainer'>
-      <ul className='itemlist'>
-      {Users
-            .filter(user => {
-              // Make sure you check query separately from gender
-              const matchesQuery = user.first_name
-                .toLowerCase()
-                .includes(query.toLowerCase());
-              const matchesGender = user.gender === itemGender;
-              const matchesCType = user.clothing_type == clothingType
-              return matchesQuery && matchesGender && matchesCType;
-            }).map((user) => (
-
-        <div key={user.id} className='listItem' onClick={() => setSelectedItem(user.id)}
->
-  <img src={user.image1}></img>
-           <div className='itemtoparea'><h2>{user.first_name}</h2> <p>${user.price}</p></div><div className='itembottomarea'> <button>S</button> <button>M</button> <button>L</button> <button>XL</button> </div> 
-          </div> 
-          
-        // This is where you would stylise for each item. ^^
-    ))}
+            </div> 
+<Suspense
+				fallback={<div>Items Loading...</div>}
+			>
+				<DynamicSearch
+  query={query}
+  setQuery={setQuery}
+  itemGender={itemGender}
+  setItemGender={setItemGender}
+  clothingType={clothingType}
+  setClothingType={setClothingType}
+  setSelectedItem={setSelectedItem}
+  Users={Users}
+/>
+			</Suspense>
 
 
-      </ul>
-      </div>
-      </div>
 
        <div className='singleitemcontainer' id='singleitem'>
 
@@ -167,13 +130,15 @@ function App() {
       {size}
     </button>
   ))}
-  <button>SIZE GUIDE</button>
-</div>
+  <button onClick={ () => {setDialogContent(<SizeGuide />) 
+toggleDialog()}}>SIZE GUIDE</button></div>
 
 
-<div className='buttonline2'><button>CARE GUIDE</button></div>
+<div className='buttonline2'><button onClick={ () => {setDialogContent(<CareGuide />) 
+toggleDialog()}}>CARE GUIDE</button></div>
 
 <div className='buttonline3'>
+  
 <button
   onClick={() => {
     const itemId = Users[selectedItem - 1].id;
@@ -201,6 +166,10 @@ function App() {
 </div>
 </div>
 </div>
+<dialog ref={dialogRef}>{dialogContent} <button onClick={toggleDialog}>Close</button></dialog>
+
+
+
 
       <div className='cartcontainer'>
         
@@ -228,6 +197,18 @@ function App() {
 
     </>
   )
+
+  function toggleDialog() {
+
+
+  if(!dialogRef.current){
+    return;
+  }
+  dialogRef.current.hasAttribute("open")
+  ? dialogRef.current.close()
+  : dialogRef.current.showModal()
+
+}
 }
 
 export default App

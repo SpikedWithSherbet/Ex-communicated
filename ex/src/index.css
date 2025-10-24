@@ -151,6 +151,8 @@ margin-left: 2rem;
 
   display: flex;
   gap: 1rem;
+  width: 25rem;
+  flex-wrap: wrap;
 }
 
 .gridcontainer {
@@ -449,17 +451,21 @@ align-content: center;
 
 @media screen and (min-width: 1023px) and (max-width: 1439px){
 
+
+  .herocontainer .herocontent {
+
+  display: block;
+ }
+
+ 
+
   .herocontainer .gallery-wrap {
  display: flex;
     display: grid;
     grid-template-columns: repeat(3, 0fr);
 
 
- .heroitem {
-
-  height: 14rem;
-
- }
+ 
  
   }
   .herocontainer h1 {
@@ -518,47 +524,20 @@ align-content: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
-
   
- .herocontainer .gallery-wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 0fr);
-    flex-direction: row;
-    overflow-y: scroll;
-    white-space: nowrap;
-    scroll-snap-type: y mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 1rem;
-    margin-top: 0;
-    gap: 1rem;
-
-
-  }
+ 
 
   
 
   .herocontainer {
-    .heroitem {
-    flex: 0 0 auto;
-    width: 8rem;
-    height: 12rem;
-    border-radius: 5px;
-
-    &:hover {
-
-      flex: 1;
-    }
-
-    h1 {
-
-      margin: none;
-    }
+    display: block;
   } 
-}
 
    
   .buttoncontainer, .clothingtype {
   gap: .5rem;
+  flex-wrap: wrap;
+  width: 10rem;
   }
 .listItem {
 backdrop-filter: brightness(100%);
@@ -597,7 +576,7 @@ img {
 
   .herocontainer h1 {
 
-    font-size: 4em;
+    font-size: 6em;
     width: 20%;
   }
 
@@ -653,19 +632,10 @@ box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
 
- .herocontainer .gallery-wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 0fr);
-    flex-direction: row;
-    overflow-y: scroll;
-    white-space: nowrap;
-    scroll-snap-type: y mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 1rem;
-    gap: 1rem;
+.gallery-container {
 
-
-  }
+  display: none;
+}
 
   .herocontainer .heroitem {
     flex: 0 0 auto;
@@ -682,6 +652,8 @@ box-sizing: border-box;
 
       font-size: 5em;
     }
+
+
   }
 
    

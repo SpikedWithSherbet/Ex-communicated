@@ -135,7 +135,6 @@ useEffect(() => {
               key={i}
               className="gallery-item"
               style={{
-                width: `${faceWidth}px`,
                 transform: `rotateY(${i * (360 / faceCount)}deg) translateZ(${radius}px)`
               }}
             >
