@@ -4,7 +4,7 @@ import { Users } from './users'
 import './RollingGallery.css';
 
 const IMGS = [
-  Users[1].image1,
+  Users[9].image1,
   Users[2].image1,
   Users[3].image1,
   Users[4].image1,
