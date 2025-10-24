@@ -5,8 +5,8 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 29.99,
     "gender": "Unisex",
-    "image1": "Ex-communicated/images/Ex-StandardFit Graphic Tee1.png",
-    "image2": "Ex-communicated/images/Ex-StandardFit Graphic Tee2.png"
+    "image1": "Ex-communicated/images/Ex-StandardFitGraphicTee1.png",
+    "image2": "Ex-communicated/images/Ex-StandardFitGraphicTee2.png"
   },
  
 
