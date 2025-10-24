@@ -5,8 +5,8 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 29.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/Ex-StandardFitGraphicTee1.png",
-    "image2": "/Ex-communicated/assets/Ex-StandardFitGraphicTee2.png"
+    "image1": "./Ex-StandardFitGraphicTee1.png",
+    "image2": "./Ex-StandardFitGraphicTee2.png"
   },
  
 
@@ -16,8 +16,8 @@ export const Users = [
     "clothing_type": "Jackets",
     "price": 59.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/Hoodie1.png",
-    "image2": "/Ex-communicated/assets/Hoodie2.png"
+    "image1": "./Hoodie1.png",
+    "image2": "./Hoodie2.png"
   },
   {
     "id": 3,
@@ -25,8 +25,8 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 19.99,
     "gender": "Male",
-    "image1": "/Ex-communicated/assets/Tanktop1.png",
-    "image2": "/Ex-communicated/assets/Tanktop2.png"
+    "image1": "./Tanktop1.png",
+    "image2": "./Tanktop2.png"
  , },
   
   {
@@ -35,8 +35,8 @@ export const Users = [
     "clothing_type": "Shorts",
     "price": 19.99,
     "gender": "Male",
-    "image1": "/Ex-communicated/assets/sweatpants1.png",
-    "image2": "/Ex-communicated/assets/sweatpants1.png"
+    "image1": "./sweatpants1.png",
+    "image2": "./sweatpants1.png"
  , },
   {
     "id": 5,
@@ -44,8 +44,8 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 29.99,
     "gender": "Male",
-    "image1": "/Ex-communicated/assets/Slim-FitLongSleeve1.png",
-    "image2": "/Ex-communicated/assets/SlimFitLongSleeve2.png"
+    "image1": "./Slim-FitLongSleeve1.png",
+    "image2": "./SlimFitLongSleeve2.png"
  , },
   {
     "id": 6,
@@ -53,8 +53,8 @@ export const Users = [
     "clothing_type": "Jackets",
     "price": 69.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/RedHoodie2.png",
-    "image2": "/Ex-communicated/assets/RedHoodie1.png"
+    "image1": "./RedHoodie2.png",
+    "image2": "./RedHoodie1.png"
   },
   {
     "id": 7,
@@ -62,8 +62,8 @@ export const Users = [
     "clothing_type": "Sweatpants",
     "price": 39.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/WideSweatGrey.png",
-    "image2": "/Ex-communicated/assets/WideSweatGrey.png"
+    "image1": "./WideSweatGrey.png",
+    "image2": "./WideSweatGrey.png"
   },
   {
     "id": 8,
@@ -71,18 +71,18 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 39.99,
     "gender": "Male",
-    "image1": "/Ex-communicated/assets/GraphicTank1.png",
-    "image2": "/Ex-communicated/assets/GraphicTank2.png"
+    "image1": "./GraphicTank1.png",
+    "image2": "./GraphicTank2.png"
  , },
 
    {
     "id": 9,
-    "first_name": "Gray /Ex-communicated Tee",
+    "first_name": "Gray ./Ex-communicated Tee",
     "clothing_type": "T-shirts",
     "price": 29.99,
     "gender": "Female",
-    "image1": "/Ex-communicated/assets/FemaleShirt1.png",
-    "image2": "/Ex-communicated/assets/FemaleShirt2.png"
+    "image1": "./FemaleShirt1.png",
+    "image2": "./FemaleShirt2.png"
   },
 
    {
@@ -91,18 +91,18 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 29.99,
     "gender": "Female",
-    "image1": "/Ex-communicated/assets/WomensTank1.png",
-    "image2": "/Ex-communicated/assets/WomensTank2.png"
+    "image1": "./WomensTank1.png",
+    "image2": "./WomensTank2.png"
   },
 
   {
     "id": 11,
-    "first_name": "Gray /Ex-communicated Shirt",
+    "first_name": "Gray ./Ex-communicated Shirt",
     "clothing_type": "T-shirts",
     "price": 29.99,
     "gender": "Female",
-    "image1": "/Ex-communicated/assets/WomensShirt1.png",
-    "image2": "/Ex-communicated/assets/WomensShirt2.png"
+    "image1": "./WomensShirt1.png",
+    "image2": "./WomensShirt2.png"
   },
   {
     "id": 12,
@@ -110,8 +110,8 @@ export const Users = [
     "clothing_type": "Sweatpants",
     "price": 39.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/WideSweatWhite.png",
-    "image2": "/Ex-communicated/assets/WideSweatWhite.png"
+    "image1": "./WideSweatWhite.png",
+    "image2": "./WideSweatWhite.png"
   },
   {
     "id": 13,
@@ -119,8 +119,8 @@ export const Users = [
     "clothing_type": "Sweatpants",
     "price": 29.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/SweatpantsGreen1.png",
-    "image2": "/Ex-communicated/assets/SweatpantsGreen1.png"
+    "image1": "./SweatpantsGreen1.png",
+    "image2": "./SweatpantsGreen1.png"
   },
   {
     "id": 14,
@@ -128,8 +128,8 @@ export const Users = [
     "clothing_type": "Sweatpants",
     "price": 29.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/SweatpantsYellow.png",
-    "image2": "/Ex-communicated/assets/SweatpantsYellow.png"
+    "image1": "./SweatpantsYellow.png",
+    "image2": "./SweatpantsYellow.png"
   },
   {
     "id": 15,
@@ -137,8 +137,8 @@ export const Users = [
     "clothing_type": "Sweatpants",
     "price": 29.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/SweatpantsRed1.png",
-    "image2": "/Ex-communicated/assets/SweatpantsRed1.png"
+    "image1": "./SweatpantsRed1.png",
+    "image2": "./SweatpantsRed1.png"
   },
 
   {
@@ -147,7 +147,7 @@ export const Users = [
     "clothing_type": "Shorts",
     "price": 19.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcShorts1.png"
+    "image1": "./EcShorts1.png"
   },
   {
     "id": 17,
@@ -155,7 +155,7 @@ export const Users = [
     "clothing_type": "Accessories",
     "price": 24.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcBag1.png"
+    "image1": "./EcBag1.png"
   },
   {
     "id": 18,
@@ -163,7 +163,7 @@ export const Users = [
     "clothing_type": "Accessories",
     "price": 24.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcBag2.png"
+    "image1": "./EcBag2.png"
   },
   {
     "id": 19,
@@ -171,7 +171,7 @@ export const Users = [
     "clothing_type": "Accessories",
     "price": 14.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcHat.png"
+    "image1": "./EcHat.png"
   },
   {
     "id": 20,
@@ -179,7 +179,7 @@ export const Users = [
     "clothing_type": "Accessories",
     "price": 14.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcHat2.png"
+    "image1": "./EcHat2.png"
   },
   {
     "id": 21,
@@ -187,7 +187,7 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 34.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcOversized1.png"
+    "image1": "./EcOversized1.png"
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 34.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcOversized3.png"
+    "image1": "./EcOversized3.png"
   },
   {
     "id": 23,
@@ -203,7 +203,7 @@ export const Users = [
     "clothing_type": "T-shirts",
     "price": 44.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/EcOversizedSweat.png"
+    "image1": "./EcOversizedSweat.png"
   },
   {
     "id": 24,
@@ -211,7 +211,7 @@ export const Users = [
     "clothing_type": "Jackets",
     "price": 59.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/Hoodie5.png"
+    "image1": "./Hoodie5.png"
   },
   {
     "id": 25,
@@ -219,7 +219,7 @@ export const Users = [
     "clothing_type": "Jackets",
     "price": 59.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/Hoodie6.png"
+    "image1": "./Hoodie6.png"
   },
   {
     "id": 26,
@@ -227,7 +227,7 @@ export const Users = [
     "clothing_type": "Shorts",
     "price": 19.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/Shorts3.png"
+    "image1": "./Shorts3.png"
   },
   {
     "id": 27,
@@ -235,6 +235,6 @@ export const Users = [
     "clothing_type": "Shorts",
     "price": 19.99,
     "gender": "Unisex",
-    "image1": "/Ex-communicated/assets/Shorts4.png"
+    "image1": "./Shorts4.png"
   }
 ]
